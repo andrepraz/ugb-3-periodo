@@ -1,2 +1,3 @@
 # ugb-3-periodo
-Material do projeto estoque de produtos
+
+Material dos projetos: mysite e estoque de produtos
