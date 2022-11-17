@@ -34,6 +34,7 @@ def alterar(request, pk):
         template_name = 'alterar_produto.html'
         context = {
             'form': ProdutoForm(instance=produto),
+            'pk': pk,
         }
         return render(request, template_name, context)
 
