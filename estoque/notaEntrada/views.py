@@ -27,3 +27,9 @@ def notaEntradaNew(request):
             'form': form,
         }
         return render(request, template_name, context)
+
+def notaEntradaUpdate(request):
+    pass
+
+def notaEntradaDelete(request):
+    pass

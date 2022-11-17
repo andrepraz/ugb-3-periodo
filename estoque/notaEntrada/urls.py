@@ -7,5 +7,5 @@ urlpatterns = [
     path('notaEntradaList/', notaEntradaList, name='notaEntradaList'),
     path('notaEntradaNew/', notaEntradaNew, name='notaEntradaNew'),
     path('notaEntradaUpdate/<int:pk>/', notaEntradaUpdate, name='notaEntradaUpdate'),
-    path('notaEntradaDelete/<int:pk>/', notaEntradaDelete, name='notaEntradaDelete')
+    path('notaEntradaDelete/<int:pk>/', notaEntradaDelete, name='notaEntradaDelete'),
 ]
