@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Select
 from .models import NotasEntradas
 
 class NotasEntradasForm(ModelForm):
@@ -6,3 +6,8 @@ class NotasEntradasForm(ModelForm):
         model = NotasEntradas
         #fields = '__all__'
         fields = ['produto', 'quantidade', 'preco']
+        widgets = {
+            'produto': Select(attrs={'class': 'select'}),
+            'quantidade': TextInput(attrs={'class': 'input'}),
+            'preco': TextInput(attrs={'class': 'input'}),
+        }

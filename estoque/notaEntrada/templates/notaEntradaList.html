@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block product %}
-<a href="{% url 'entrada:notaEntradaNew' %}">Novo</a>
+<a class="button is-primary" href="{% url 'entrada:notaEntradaNew' %}">Novo</a>
 
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>Id</th>
@@ -16,15 +16,15 @@
         </tr>
     </thead>
     <tbody>
-        {% for produto in produtos %}
+        {% for nota_entrada in notas_entrada %}
         <tr>
-            <td>{{ produto.id }}</td>
-            <td>{{ produto.produto }}</td>
-            <td>{{ produto.cor }}</td>
-            <td>{{ produto.preco }}</td>
-            <td>{{ produto.quantidade }}</td>
-            <td><a href="{% url 'entrada:notaEntradaUpdade' produto.id %}">alterar</a></td>
-            <td><a href="{% url 'entrada:notaEntradaDelete' produto.id %}">deletar</a></td>
+            <td>{{ nota_entrada.id }}</td>
+            <td>{{ nota_entrada.produto }}</td>
+            <td>{{ nota_entrada.cor }}</td>
+            <td>{{ nota_entrada.preco }}</td>
+            <td>{{ nota_entrada.quantidade }}</td>
+            <td><a class="button is-primary" href="{% url 'entrada:notaEntradaUpdate' nota_entrada.id %}">alterar</a></td>
+            <td><a class="button is-primary" href="{% url 'entrada:notaEntradaDelete' nota_entrada.id %}">deletar</a></td>
         </tr>
         {% endfor %}
     </tbody>
